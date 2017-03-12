@@ -380,6 +380,11 @@ footer
 
 
 
+
+
+
+
+
 /********** Articles *************/
 
 #a1
@@ -443,7 +448,7 @@ footer
 	width: 400px;
 	height: 250px;
 
-	background-image: url("images/fondetape2.png");
+	background-image: url("images/fondetape3.png");
 	opacity: 0;
 
 	transition: 0.5s;
@@ -451,7 +456,7 @@ footer
 
 .t3:hover
 {
-	background-image: url("images/fondetape2.png");
+	background-image: url("images/fondetape3.png");
 	opacity: 1;
 
 	transition: 0.5s;
@@ -468,7 +473,7 @@ footer
 	width: 600px;
 	height: 250px;
 
-	background-image: url("images/fondetape1.png");
+	background-image: url("images/fondetape4.png");
 	opacity: 0;
 
 	transition: 0.5s;
@@ -476,7 +481,7 @@ footer
 
 .t4:hover
 {
-	background-image: url("images/fondetape1.png");
+	background-image: url("images/fondetape4.png");
 	opacity: 1;
 
 	transition: 0.5s;
@@ -493,7 +498,7 @@ footer
 	width: 600px;
 	height: 250px;
 
-	background-image: url("images/fondetape1.png");
+	background-image: url("images/fondetape5.png");
 	opacity: 0;
 
 	transition: 0.5s;
@@ -501,7 +506,7 @@ footer
 
 .t5:hover
 {
-	background-image: url("images/fondetape1.png");
+	background-image: url("images/fondetape5.png");
 	opacity: 1;
 
 	transition: 0.5s;
@@ -519,7 +524,7 @@ footer
 	width: 400px;
 	height: 250px;
 
-	background-image: url("images/fondetape2.png");
+	background-image: url("images/fondetape6.png");
 	opacity: 0;
 
 	transition: 0.5s;
@@ -527,7 +532,7 @@ footer
 
 .t6:hover
 {
-	background-image: url("images/fondetape2.png");
+	background-image: url("images/fondetape6.png");
 	opacity: 1;
 
 	transition: 0.5s;
