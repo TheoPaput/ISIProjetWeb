@@ -36,23 +36,23 @@
 				<legend>Vos coordonnées</legend>
 
 
-				<label for="nomlab" id="nomlab">Nom :</label>
-				<input type="text" name="nom" id="nom" onkeyup="checkNom()"/>
+				<label for="nomlab">Nom :</label>
+				<input autofocus required type="text" name="nom" id="nom" onkeyup="checkNom()"/>
 
-				<label for="prenomlab" id="nomlab">Prénom :</label>
-				<input type="text" name="prenom" id="prenom" onkeyup="checkPrenom()"/>
+				<label for="prenomlab">Prénom :</label>
+				<input required type="text" name="prenom" id="prenom" onkeyup="checkPrenom()"/>
 
-				<label for="anniversaire">Date de naissance (jj/mm/aaaa) :</label>
-				<input type="text" name="anniversaire" id="anniversaire" />
+				<label for="naissance">Date de naissance (jj/mm/aaaa) :</label>
+				<input required type="text" name="naissance" id="naissance" onkeyup="checkNaissance()"/>
 				
 				<label for="pseudo">Pseudo :</label>
-				<input type="text" name="pseudo" id="pseudo" />
+				<input required type="text" name="pseudo" id="pseudo" onkeyup="checkPseudo()"/>
 				
 				<label for="mdp">Mot de passe :</label>
-				<input type="text" name="mdp" id="mdp" />
+				<input required type="text" name="mdp" id="mdp" onkeyup="checkMdp()"/>
 				
 				<label for="email">Adresse mail :</label>
-				<input type="text" name="email" id="email" />
+				<input required type="text" name="email" id="email" onkeyup="checkEmail()"/>
 
 				<input type="submit" value="Envoyer" />
 
