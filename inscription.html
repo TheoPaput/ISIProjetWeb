@@ -8,63 +8,54 @@
 	<title>Prep'ISI Project | Decouvrez notre projet ISIMA</title>
 </head>
 
-<body>
+<body id="bodyPic">
 
 	<header>
 		<section id="entete1">
 			<div class="bloc1"><a href="http://www.isima.fr/" class="link1">ISIMA</a></div>
 			<div class="bloc1"><a href="http://www.openium.fr/" class="link1">Openium</a></div>
 		</section>
-		<section id="entete2">
-			<div class="bloc2"><a href="index.html"><img src="images/prepisiprojet.png" alt="PrepIsiProjet" id="logoprojet"></a></div>
-		</section>
-		<section id="entete3">
-			<ul id="menu1">
-				<li class="list1"><a href="#presentation" class="link2">OpeniumWifi</a></li>
-				<li class="list2"><a href="deroulement.html" class="link2">Déroulement</a></li>
-				<li class="list2"><a href="#" class="link2">Projets</a></li>
-				<li class="list2"><a href="https://github.com/search?utf8=%E2%9C%93&q=Blinkium" class="link2">GitHub</a></li>
-				<li class="list2"><a href="inscription.html" class="link2">Inscription</a></li>
-			</ul>
-		</section>
 	</header>
-	
+
+	<div class="sub">
+		<p class="subtxt">
+			Inscrivez-vous
+		</p>
+	</div>
 	<section id="inscription">
 		<form method="post" action="formulaire.js">
 			<fieldset class="form1">
 
-				<legend>Vos coordonnées</legend>
-
-
 				<label for="nomlab">Nom :</label>
-				<input autofocus required type="text" name="nom" id="nom" onkeyup="checkNom()"/>
+				<input class="champ1" autofocus required type="text" name="nom" id="nom" onkeyup="checkNom()"/>
 
 				<label for="prenomlab">Prénom :</label>
-				<input required type="text" name="prenom" id="prenom" onkeyup="checkPrenom()"/>
+				<input class="champ1" required type="text" name="prenom" id="prenom" onkeyup="checkPrenom()"/>
 
 				<label for="naissance">Date de naissance (jj/mm/aaaa) :</label>
-				<input required type="text" name="naissance" id="naissance" onkeyup="checkNaissance()"/>
+				<input class="champ1" required type="text" name="naissance" id="naissance" onkeyup="checkNaissance()"/>
 				
 				<label for="pseudo">Pseudo :</label>
-				<input required type="text" name="pseudo" id="pseudo" onkeyup="checkPseudo()"/>
+				<input class="champ1" required type="text" name="pseudo" id="pseudo" onkeyup="checkPseudo()"/>
 				
 				<label for="mdp">Mot de passe :</label>
-				<input required type="text" name="mdp" id="mdp" onkeyup="checkMdp()"/>
+				<input class="champ1"required type="text" name="mdp" id="mdp" onkeyup="checkMdp()"/>
 				
 				<label for="email">Adresse mail :</label>
-				<input required type="text" name="email" id="email" onkeyup="checkEmail()"/>
+				<input class="champ1" required type="text" name="email" id="email" onkeyup="checkEmail()"/>
 
-				<input type="submit" value="Envoyer" />
+				<input class="buton1" type="submit" value="Envoyer" />
 
 			</fieldset>
 		</form>
 	</section>
+	<div class="back">
+		<p class="backtxt">
+			<a href="index.html">Retour Accueil</a>
+		</p>
+	</div>
 	
 	
-	
-	<footer>
-		
-	</footer>
 
 </body>
 
