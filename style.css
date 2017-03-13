@@ -124,7 +124,7 @@ header
 #menu1
 {
 	padding-top: 12px;
-	margin-right: 167px;
+	margin-right: 163px;
 	list-style-type: none;
 
 	display: flex;
@@ -134,7 +134,7 @@ header
 
 #menu1>li
 {
-	margin-left: 167px;
+	margin-left: 162px;
 }
 
 .link2
@@ -345,7 +345,36 @@ header
 	/*background-color: black;*/
 }
 
+#inscription
+{
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
+	font-style: normal;
+	font-size: 15px;
+	font-family: Opensansregul;
+	font-weight: normal;
+	text-decoration: none;
+	text-align: justify;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: center;	
+}
 
+.form1
+{
+	padding: 25px;
+	/*background-color: black;*/
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	border: 2px solid black;
+	border-radius: 10px;
+}
 
 
 
