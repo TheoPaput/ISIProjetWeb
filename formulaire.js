@@ -126,7 +126,7 @@ var checkMdp = function() {	/*Vérifie la validité du Mot de passe (entre 8 et 
 }
 
 
-var checkEmail = function() {	/*Vérifie la validité du Mot de passe (entre 8 et 16 caractères)*/
+var checkEmail = function() {	/*Vérifie la validité de l'email (Présence de @)*/
 	var texte = document.getElementById("email").value;
 	var valid = false;
 	
@@ -155,11 +155,9 @@ var updateButton = function(){
 	form_valid = nom_valid && prenom_valid && naissance_valid && pseudo_valid && mdp_valid && email_valid;
 	
 	if (form_valid){
-		document.getElementById("email").style.color = "#0f6ac4";
-		document.getElementById("mdp").style.color = "#0f6ac4";
-		document.getElementById("pseudo").style.color = "#0f6ac4";
-		document.getElementById("nom").style.color = "#0f6ac4";
-		document.getElementById("prenom").style.color = "#0f6ac4";
-		document.getElementById("naissance").style.color = "#0f6ac4";
+		document.getElementById('butonSub').disabled = '';
+	}
+	else{
+		document.getElementById('butonSub').disabled = 'disabled';
 	}
 }
