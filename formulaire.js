@@ -2,6 +2,19 @@ var nom_valid = false, prenom_valid = false, naissance_valid = false, pseudo_val
 var form_valid = false;
 
 
+var initPage= function()
+{
+	document.getElementById("nom").addEventListener("input", checkNom, false);
+	document.getElementById("prenom").addEventListener("input", checkPrenom, false);
+	document.getElementById("naissance").addEventListener("input", checkNaissance, false);
+	document.getElementById("pseudo").addEventListener("input", checkPseudo, false);
+	document.getElementById("mdp").addEventListener("input", checkMdp, false);
+	document.getElementById("email").addEventListener("input", checkEmail, false);
+	
+	updateButton();
+}
+
+
 var checkNom = function() {	/*Vérifie la validité du Nom (soit pas de caractère spéciaux)*/
 	var texte = document.getElementById("nom").value;
 	var valid = true;
@@ -54,22 +67,25 @@ var checkPrenom = function() {	/*Vérifie la validité du Prénom (Pas de caract
 
 
 var checkNaissance = function() {	/*Vérifie la validité de la date de naissance (Respect de la forme imposée)*/
-	var texte = document.getElementById("naissance").value;
+	var date_a_verif = document.getElementById("naissance").value;
 	var valid = true;
 	
-	for(var i = 0; i < texte.length; i++){
-		var c = texte.charCodeAt(i);
-		if ( i == 2 || i == 5){
-			if ( c != 47)
-				valid = false;
-		}
-		else{
-			if ( c < 48 || c > 57)
-				valid = false;
+	var actualYear = new Date().getFullYear();
+	
+	if (date_a_verif.length != 10) {
+		valid = false;
+	}
+	else{
+		var date_split = date_a_verif.split("/");
+		var date = new Date();
+		date_split[1] -= 1;
+		date.setFullYear(date_split[2]);
+		date.setMonth(date_split[1]);
+		date.setDate(date_split[0]);
+		if (!(date.getFullYear() == date_split[2] && date.getMonth() == date_split[1] && date.getDate() == date_split[0] && date.getFullYear() >= actualYear-150)){
+			valid = false;
 		}
 	}
-	if( texte.length > 10)
-		valid = false;
 	
 	naissance_valid = valid;
 	
@@ -156,8 +172,11 @@ var updateButton = function(){
 	
 	if (form_valid){
 		document.getElementById('butonSub').disabled = '';
+		document.getElementById('butonSub').className = "buttonEnabled";
 	}
 	else{
 		document.getElementById('butonSub').disabled = 'disabled';
+		document.getElementById('butonSub').className = "buttonDisabled";
 	}
 }
+

@@ -438,7 +438,7 @@ header
 }
 
 
-.buton1
+.buttonEnabled
 {
 	margin-left: auto;
 	margin-right: auto;
@@ -463,7 +463,32 @@ header
 	transition: 0.5s;
 }
 
-.buton1:hover
+.buttonDisabled
+{
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 80px;
+	padding-left: 80px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	background-color: #727584;
+
+	color: #FFFFFF;
+	font-style: normal;
+	font-size: 16px;
+	font-family: Opensansgras;
+	font-weight: normal;
+	text-decoration: none;
+	text-align: justify;
+
+	border: solid #00030c 1px;
+	border-radius: 4px;
+
+	transition: 0.5s;
+}
+
+.buttonEnabled:hover
 {
 	background-color: #5b6277;
 	transition: 0.5s;
@@ -482,8 +507,7 @@ header
 {
 	padding-top: 10px;
 	padding-bottom: 15px;
-	padding-left: 81px;
-	padding-right: 81px;
+	margin: auto;
 
 	/*background-color: white;*/
 }

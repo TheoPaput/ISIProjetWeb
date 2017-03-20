@@ -8,7 +8,7 @@
 	<title>Prep'ISI Project | Decouvrez notre projet ISIMA</title>
 </head>
 
-<body id="bodyPic">
+<body id="bodyPic" onpageshow="initPage()">
 
 	<header>
 		<section id="entete1">
@@ -29,24 +29,24 @@
 			<fieldset class="form1">
 
 				<label for="nomlab">Nom :</label>
-				<input class="champ1" autofocus required type="text" name="nom" id="nom" onkeyup="checkNom()"/>
+				<input class="champ1" autofocus required type="text" name="nom" id="nom" />
 
 				<label for="prenomlab">Prénom :</label>
-				<input class="champ1" required type="text" name="prenom" id="prenom" onkeyup="checkPrenom()"/>
+				<input class="champ1" required type="text" name="prenom" id="prenom" />
 
 				<label for="naissance">Date de naissance (jj/mm/aaaa) :</label>
-				<input class="champ1" required type="text" name="naissance" id="naissance" onkeyup="checkNaissance()"/>
+				<input class="champ1" required type="text" name="naissance" id="naissance" />
 				
 				<label for="pseudo">Pseudo :</label>
-				<input class="champ1" required type="text" name="pseudo" id="pseudo" onkeyup="checkPseudo()"/>
+				<input class="champ1" required type="text" name="pseudo" id="pseudo" />
 				
 				<label for="mdp">Mot de passe :</label>
-				<input class="champ1"required type="text" name="mdp" id="mdp" onkeyup="checkMdp()"/>
+				<input class="champ1" required type="password" name="mdp" id="mdp" />
 				
 				<label for="email">Adresse mail :</label>
-				<input class="champ1" required type="text" name="email" id="email" onkeyup="checkEmail()"/>
+				<input class="champ1" required type="text" name="email" id="email" />
 
-				<input id="butonSub" class="buton1" type="submit" value="Envoyer" />
+				<input id="butonSub" class="buttonDisabled" type="submit" value="Envoyer" />
 
 			</fieldset>
 		</form>
