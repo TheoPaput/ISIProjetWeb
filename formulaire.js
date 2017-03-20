@@ -1,4 +1,4 @@
-var nom_valid = false, prenom_valid = false, naissance_valid = false, pseudo_valid = false, mdp_valid = false, email_valid = false;
+var nom_valid = false, prenom_valid = false, naissance_valid = false, pseudo_valid = false, mdp_valid = false, email_valid = false, verifMdp_valid = false;
 var form_valid = false;
 
 
@@ -9,7 +9,9 @@ var initPage= function()
 	document.getElementById("naissance").addEventListener("input", checkNaissance, false);
 	document.getElementById("pseudo").addEventListener("input", checkPseudo, false);
 	document.getElementById("mdp").addEventListener("input", checkMdp, false);
+	document.getElementById("verifMdp").addEventListener("input", checkverifMdp, false);
 	document.getElementById("email").addEventListener("input", checkEmail, false);
+
 	
 	updateButton();
 }
@@ -44,7 +46,7 @@ var checkPrenom = function() {	/*Vérifie la validité du Prénom (Pas de caract
 	var texte = document.getElementById("prenom").value;
 	var valid = true;
 
-	for(var i = 0; i < texte.length; i++){
+	for(var i = 0; i <= texte.length; i++){
 		var c = texte.charCodeAt(i);
 		if (c < 65 || c > 122){
 			if( c < 224)
@@ -142,6 +144,32 @@ var checkMdp = function() {	/*Vérifie la validité du Mot de passe (entre 8 et 
 }
 
 
+var checkverifMdp = function(){	/*Vérifie que la valeur est la même que celle du mot de passe*/
+	var texte = document.getElementById("verifMdp").value;
+	var texte2 = document.getElementById("mdp").value;
+	var valid = false;
+
+	if (texte.length == texte2.length){
+		valid = true;
+		for(var i = 0; i < texte.length; i++){
+			var c = texte.charCodeAt(i);
+			var c2 = texte2.charCodeAt(i)
+			valid = valid && (c==c2);
+		}
+	}
+
+	verifMdp_valid = valid;
+
+	if(!verifMdp_valid)
+		document.getElementById("verifMdp").style.color = "#FF0000";
+	else
+		document.getElementById("verifMdp").style.color = "#000000";
+
+	updateButton();
+
+}
+
+
 var checkEmail = function() {	/*Vérifie la validité de l'email (Présence de @)*/
 	var texte = document.getElementById("email").value;
 	var valid = false;
@@ -168,7 +196,7 @@ var checkEmail = function() {	/*Vérifie la validité de l'email (Présence de @
 
 
 var updateButton = function(){
-	form_valid = nom_valid && prenom_valid && naissance_valid && pseudo_valid && mdp_valid && email_valid;
+	form_valid = nom_valid && prenom_valid && naissance_valid && pseudo_valid && mdp_valid && email_valid && verifMdp_valid;
 	
 	if (form_valid){
 		document.getElementById('butonSub').disabled = '';

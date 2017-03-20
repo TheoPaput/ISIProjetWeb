@@ -120,6 +120,22 @@ header
 	margin-top: 15px;
 }
 
+.couverturePic1
+{
+	width: 1035px;
+	height: 643px;
+
+	background-image: url("images/couverture.jpg");
+}
+
+.couverturePic
+{
+	width: 1035px;
+	height: 643px;
+
+	background-image: url("images/couvertureDeroulement.jpg");
+}
+
 #logoprojet
 {
 	width: 350px;
@@ -134,10 +150,16 @@ header
 	/*background-color: grey;*/
 
 	width: 100%;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 #menu1
 {
+	width: 100%;
+
 	margin-right: 143px;
 	list-style-type: none;
 
@@ -741,6 +763,7 @@ footer
 
 @media screen and (max-width: 1035px)
 {
+
     #menu1
 	{
 		padding-top: 0px;
@@ -758,6 +781,35 @@ footer
 		margin: auto;
 		padding: 10px;
 	}
+
+}
+
+@media screen and (max-width: 600px)
+{
+
+	#menu1
+	{
+		width: 30px;
+		height: 30px;
+
+		margin: 5px;
+		background-image: url("images/menu.png");
+	}
+
+
+	#menu1>li
+	{
+		display: none;
+	}
+
+	#menu1:hover
+	{
+		#menu1>li
+		{
+			display: block;
+		}
+	}
+
 
 }
 
