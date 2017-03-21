@@ -34,10 +34,12 @@ var switchMenu = function(){
 
 window.onresize = function ()
 {
+
 	if (window.matchMedia("(min-width: 600px)").matches) {
 		document.getElementById("menu1").style.display = 'flex';
 		flag_dim = true;
 	}
+
 
 	if (window.matchMedia("(max-width: 600px)").matches) {
 		if (flag_dim == true){
@@ -48,6 +50,9 @@ window.onresize = function ()
 
 	resizePic();
 }
+
+
+
 
 
 var resizePic = function()
@@ -61,4 +66,12 @@ var resizePic = function()
     }
     else
         document.getElementById("couverturePic1").style.height = "643px";
+
+
+    if (window.matchMedia("(min-width: 500px)").matches){
+		document.getElementById("logoprojet").src = "images/prepisiprojet.png";
+	}
+	if (window.matchMedia("(max-width: 500px)").matches){
+		document.getElementById("logoprojet").src = "images/prepisiprojetmini.png";
+	}
 }
