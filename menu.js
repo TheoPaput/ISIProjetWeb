@@ -1,4 +1,5 @@
 var flag = false;
+var flag_dim = false;
 
 var initPage = function(){
 
@@ -50,9 +51,13 @@ window.onresize = function ()
 {
 	if (window.matchMedia("(min-width: 600px)").matches) {
 		document.getElementById("menu1").style.display = 'flex';
+		flag_dim = true;
 	}
 
 	if (window.matchMedia("(max-width: 600px)").matches) {
-		document.getElementById("menu1").style.display = 'none';
+		if (flag_dim == true){
+			document.getElementById("menu1").style.display = 'none';
+			flag_dim = false;
+		}
 	}
 }

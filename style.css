@@ -825,8 +825,7 @@ footer
 	#menu1
 	{
 		margin-top: 25px;
-		/*margin-left: 50px;
-		padding: 10px;*/
+		margin-right: 0px;
 
 		width: 100%;
 		height: 180px;
@@ -835,18 +834,22 @@ footer
 
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		text-align: center;
+		align-items: center;
 
 		z-index: 1;
 	}
 
 	#menu1>li
 	{
-		margin: 0px;
-		padding: 0px;
-		padding: 10px;
+		width: 80%;
 
-		border-top: solid 1px black;
+		margin: 0px;
+		padding: 10px;
+		padding-left: 0px;
+
+		border-top: solid 1px #aaaaaa;
 	}
 
 }
