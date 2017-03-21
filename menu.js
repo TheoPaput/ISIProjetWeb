@@ -33,7 +33,7 @@ var hideMenu = function(){
 
 var switchMenu = function(){
 	if (flag == false){
-		document.getElementById("menu1").style.display = 'block';
+		document.getElementById("menu1").style.display = 'flex';
 		flag = true;
 	}
 	else{
