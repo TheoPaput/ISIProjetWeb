@@ -4,10 +4,11 @@
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="reset.css" />
    	<link rel="stylesheet" href="style.css" />
+   	<script src="menu.js"></script>
 	<title>Déroulement de notre projet</title>
 </head>
 
-<body>
+<body onpageshow="initPage()">
 
 	<header>
 		<section id="entete1">
@@ -18,13 +19,15 @@
 			<div class="bloc2"><a href="index.html"><img src="images/prepisiprojet.png" alt="PrepIsiProjet" id="logoprojet"></a></div>
 		</section>
 		<section id="entete3">
-			<ul id="menu1">
-				<li class="list1"><a href="index.html#presentation" class="link2">OpeniumWifi</a></li>
-				<li class="list2"><a href="deroulement.html" class="link2">Déroulement</a></li>
-				<li class="list2"><a href="#" class="link2">Projets</a></li>
-				<li class="list2"><a href="https://github.com/search?utf8=%E2%9C%93&q=Blinkium" class="link2">GitHub</a></li>
-				<li class="list2"><a href="inscription.html" class="link2">Inscription</a></li>
-			</ul>
+			<div id="entete3menu">
+				<ul id="menu1">
+					<li class="list1"><a href="index.html#presentation" class="link2">OpeniumWifi</a></li>
+					<li class="list1"><a href="deroulement.html" class="link2">Déroulement</a></li>
+					<li class="list1"><a href="#" class="link2">Projets</a></li>
+					<li class="list1"><a href="https://github.com/search?utf8=%E2%9C%93&q=Blinkium" class="link2">GitHub</a></li>
+					<li class="list1"><a href="inscription.html" class="link2">Inscription</a></li>
+				</ul>
+			</div>
 		</section>
 	</header>
 	

@@ -145,6 +145,12 @@ header
 
 #entete3
 {
+	width: 100%;
+}
+
+
+#entete3menu
+{
 	margin: 0px;
 	padding: 0px;
 	/*background-color: grey;*/
@@ -156,21 +162,22 @@ header
 	justify-content: center;
 }
 
+
 #menu1
 {
-	width: 100%;
+	width: 1056px;
 
-	margin-right: 143px;
+	/*margin-right: 143px;*/
 	list-style-type: none;
 
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-between;
 }
 
 #menu1>li
 {
-	margin-left: 143px;
+	/*margin-left: 143px;*/
 	padding: 10px;
 }
 
@@ -787,7 +794,14 @@ footer
 @media screen and (max-width: 600px)
 {
 
-	#menu1
+	#entete3
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	#entete3menu
 	{
 		width: 30px;
 		height: 30px;
@@ -797,18 +811,22 @@ footer
 	}
 
 
-	#menu1>li
+	#menu1
 	{
+
 		display: none;
+		/*width: 30px;
+		height: 30px;
+
+		margin: 5px;
+		background-image: url("images/menu.png");*/
 	}
 
-	#menu1:hover
+
+	/*#menu1>li
 	{
-		#menu1>li
-		{
-			display: block;
-		}
-	}
+		display: none;
+	}*/
 
 
 }
