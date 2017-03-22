@@ -1,7 +1,7 @@
 var flag = false;
 var flag_dim = false;
 var ratio = 1035/643;
-var a;
+var flag_pic = true;
 
 var initPage = function(){
 
@@ -13,8 +13,6 @@ var initPage = function(){
 
 	resizePic();
 }
-
-
 
 
 var switchMenu = function(){
@@ -52,26 +50,65 @@ window.onresize = function ()
 }
 
 
+ if (document.getElementById("") == 'id1'){
+ 
+ }
+
+
+
+
 
 
 
 var resizePic = function()
 {
-	a = document.getElementById("couverturePic1").offsetWidth;
+
+	var a = 0;
+	var b = 0;
+	if (document.getElementById("couverturePic1") != null) { a = document.getElementById("couverturePic1").offsetWidth;}
+	if (document.getElementById("couverturePic") != null) { b = document.getElementById("couverturePic").offsetWidth;}
+	
+
+
+	if ( a != 0 ){
     if (a < 1035){
-    	if (a > 600)
+    	if (a > 600){
+    		document.getElementById("couverturePic1").style.backgroundImage = 'url("D:/Projets/ISIMA/ISIProjetWeb/images/couverture.jpg")';
+    		flag_pic = true;
         	document.getElementById("couverturePic1").style.height = (a / ratio)+"px";
+        }
         else
-        	document.getElementById("couverturePic1").style.height = (600 / ratio)+"px";
-    }
+        	/*document.getElementById("couverturePic1").style.height = (600 / ratio)+"px";*/
+        	document.getElementById("couverturePic1").style.backgroundImage = 'url("D:/Projets/ISIMA/ISIProjetWeb/images/couvertureMini.jpg")';
+        	flag_pic = false;
+	}
     else
         document.getElementById("couverturePic1").style.height = "643px";
+	}
+	if (flag_pic == false)
+		document.getElementById("couverturePic1").style.height = 376 +"px";
+		
+		
 
 
-    if (window.matchMedia("(min-width: 500px)").matches){
+	if ( b != 0 ){
+	if (b < 1035){
+		if (b > 600)
+        	document.getElementById("couverturePic").style.height = (b / ratio)+"px";
+        else
+        	document.getElementById("couverturePic").style.height = (600 / ratio)+"px";
+    }
+	else
+        document.getElementById("couverturePic").style.height = "643px";
+	}
+
+
+
+
+    if (window.matchMedia("(min-width: 600px)").matches){
 		document.getElementById("logoprojet").src = "images/prepisiprojet.png";
 	}
-	if (window.matchMedia("(max-width: 500px)").matches){
+	if (window.matchMedia("(max-width: 600px)").matches){
 		document.getElementById("logoprojet").src = "images/prepisiprojetmini.png";
 	}
 }
