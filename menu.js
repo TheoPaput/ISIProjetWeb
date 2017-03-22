@@ -1,7 +1,9 @@
 var flag = false;
 var flag_dim = false;
 var ratio = 1035/643;
-var flag_pic = true;
+var ratio2 = 600/376;
+
+
 
 var initPage = function(){
 
@@ -50,12 +52,6 @@ window.onresize = function ()
 }
 
 
- if (document.getElementById("") == 'id1'){
- 
- }
-
-
-
 
 
 
@@ -74,19 +70,20 @@ var resizePic = function()
 	    if (a < 1035){
 	    	if (a > 600){
 	    		document.getElementById("couverturePic1").style.backgroundImage = 'url("images/couverture.jpg")';
-	    		flag_pic = true;
 	        	document.getElementById("couverturePic1").style.height = (a / ratio)+"px";
+				document.getElementById("presentation").style.fontSize = 25 +"px";
+				document.getElementById("deroulement").style.fontSize = 25 +"px";
 	        }
-	        else
-	        	/*document.getElementById("couverturePic1").style.height = (600 / ratio)+"px";*/
+	        else{
 	        	document.getElementById("couverturePic1").style.backgroundImage = 'url("images/couvertureMini.jpg")';
-	        	flag_pic = false;
+	        	document.getElementById("couverturePic1").style.height = (a / ratio2)+"px";
+	        	document.getElementById("presentation").style.fontSize = 17 +"px";
+				document.getElementById("deroulement").style.fontSize = 17 +"px";
+	        }
 		}
 	    else
 	        document.getElementById("couverturePic1").style.height = "643px";
 	}
-	/*if (flag_pic == false)
-		document.getElementById("couverturePic1").style.height = 376 +"px";*/
 		
 		
 
