@@ -71,35 +71,35 @@ var resizePic = function()
 
 
 	if ( a != 0 ){
-    if (a < 1035){
-    	if (a > 600){
-    		document.getElementById("couverturePic1").style.backgroundImage = 'url("D:/Projets/ISIMA/ISIProjetWeb/images/couverture.jpg")';
-    		flag_pic = true;
-        	document.getElementById("couverturePic1").style.height = (a / ratio)+"px";
-        }
-        else
-        	/*document.getElementById("couverturePic1").style.height = (600 / ratio)+"px";*/
-        	document.getElementById("couverturePic1").style.backgroundImage = 'url("D:/Projets/ISIMA/ISIProjetWeb/images/couvertureMini.jpg")';
-        	flag_pic = false;
+	    if (a < 1035){
+	    	if (a > 600){
+	    		document.getElementById("couverturePic1").style.backgroundImage = 'url("images/couverture.jpg")';
+	    		flag_pic = true;
+	        	document.getElementById("couverturePic1").style.height = (a / ratio)+"px";
+	        }
+	        else
+	        	/*document.getElementById("couverturePic1").style.height = (600 / ratio)+"px";*/
+	        	document.getElementById("couverturePic1").style.backgroundImage = 'url("images/couvertureMini.jpg")';
+	        	flag_pic = false;
+		}
+	    else
+	        document.getElementById("couverturePic1").style.height = "643px";
 	}
-    else
-        document.getElementById("couverturePic1").style.height = "643px";
-	}
-	if (flag_pic == false)
-		document.getElementById("couverturePic1").style.height = 376 +"px";
+	/*if (flag_pic == false)
+		document.getElementById("couverturePic1").style.height = 376 +"px";*/
 		
 		
 
 
 	if ( b != 0 ){
-	if (b < 1035){
-		if (b > 600)
-        	document.getElementById("couverturePic").style.height = (b / ratio)+"px";
-        else
-        	document.getElementById("couverturePic").style.height = (600 / ratio)+"px";
-    }
-	else
-        document.getElementById("couverturePic").style.height = "643px";
+		if (b < 1035){
+			if (b > 600)
+	        	document.getElementById("couverturePic").style.height = (b / ratio)+"px";
+	        else
+	        	document.getElementById("couverturePic").style.height = (600 / ratio)+"px";
+	    }
+		else
+	        document.getElementById("couverturePic").style.height = "643px";
 	}
 
 
