@@ -1,24 +1,34 @@
 var nom_valid = false, prenom_valid = false, naissance_valid = false, pseudo_valid = false, mdp_valid = false, email_valid = false, verifMdp_valid = false;
 var form_valid = false;
 
-
-var initPage= function()
-{
-	document.getElementById("nom").addEventListener("input", checkNom, false);
-	document.getElementById("prenom").addEventListener("input", checkPrenom, false);
-	document.getElementById("naissance").addEventListener("input", checkNaissance, false);
-	document.getElementById("pseudo").addEventListener("input", checkPseudo, false);
-	document.getElementById("mdp").addEventListener("input", checkMdp, false);
-	document.getElementById("verifMdp").addEventListener("input", checkverifMdp, false);
-	document.getElementById("email").addEventListener("input", checkEmail, false);
-
-	
-	updateButton();
-}
+var lastName = document.getElementById("lastname");
+var firstName = document.getElementById("firstname");
+var birthdate = document.getElementById("birthdate");
+var username = document.getElementById("username");
+var userpwd = document.getElementById("userpwd");
+var verifMdp = document.getElementById("verifMdp");
+var usermail = document.getElementById("useremail");
 
 
-var checkNom = function() {	/*Vérifie la validité du Nom (soit pas de caractère spéciaux)*/
-	var texte = document.getElementById("nom").value;
+lastName.addEventListener("input", checkNom, false);
+firstName.addEventListener("input", checkPrenom, false);
+birthdate.addEventListener("input", checkNaissance, false);
+username.addEventListener("input", checkPseudo, false);
+userpwd.addEventListener("input", checkMdp, false);
+verifMdp.addEventListener("input", checkverifMdp, false);
+usermail.addEventListener("input", checkEmail, false);
+
+clearfields();
+
+window.onpageshow = function(event) {
+	if(event.persisted) {
+   		 window.location.reload() 
+	}
+};
+
+
+function checkNom() {	/*Vérifie la validité du lastname (soit pas de caractère spéciaux)*/
+	var texte = document.getElementById("lastname").value;
 	var valid = true;
 
 	for(var i = 0; i < texte.length; i++){
@@ -34,16 +44,16 @@ var checkNom = function() {	/*Vérifie la validité du Nom (soit pas de caractè
 	nom_valid = valid;
 
 	if(!nom_valid)
-		document.getElementById("nom").style.color = "#FF0000";
+		document.getElementById("lastname").style.color = "#FF0000";
 	else
-		document.getElementById("nom").style.color = "#000000";
+		document.getElementById("lastname").style.color = "#000000";
 
 	updateButton();		
 }
 
 
-var checkPrenom = function() {	/*Vérifie la validité du Prénom (Pas de caractères spéciaux)*/
-	var texte = document.getElementById("prenom").value;
+function checkPrenom() {	/*Vérifie la validité du Prénom (Pas de caractères spéciaux)*/
+	var texte = document.getElementById("firstname").value;
 	var valid = true;
 
 	for(var i = 0; i <= texte.length; i++){
@@ -59,17 +69,17 @@ var checkPrenom = function() {	/*Vérifie la validité du Prénom (Pas de caract
 	prenom_valid = valid;	
 
 	if(!prenom_valid)
-		document.getElementById("prenom").style.color = "#FF0000";
+		document.getElementById("firstname").style.color = "#FF0000";
 	else
-		document.getElementById("prenom").style.color = "#000000";
+		document.getElementById("firstname").style.color = "#000000";
 
 	updateButton();	
 	
 }
 
 
-var checkNaissance = function() {	/*Vérifie la validité de la date de naissance (Respect de la forme imposée)*/
-	var date_a_verif = document.getElementById("naissance").value;
+function checkNaissance() {	/*Vérifie la validité de la date de naissance (Respect de la forme imposée)*/
+	var date_a_verif = document.getElementById("birthdate").value;
 	var valid = true;
 	
 	var actualYear = new Date().getFullYear();
@@ -92,17 +102,17 @@ var checkNaissance = function() {	/*Vérifie la validité de la date de naissanc
 	naissance_valid = valid;
 	
 	if(!naissance_valid)
-		document.getElementById("naissance").style.color = "#FF0000";
+		document.getElementById("birthdate").style.color = "#FF0000";
 	else
-		document.getElementById("naissance").style.color = "#000000";
+		document.getElementById("birthdate").style.color = "#000000";
 
 	updateButton();
 	
 }
 
 
-var checkPseudo = function() {	/*Vérifie la validité du Pseudo (Entre 3 et 20 caractères)*/
-	var texte = document.getElementById("pseudo").value;
+function checkPseudo() {	/*Vérifie la validité du Pseudo (Entre 3 et 20 caractères)*/
+	var texte = document.getElementById("username").value;
 	var valid = true;
 
 	for(var i = 0; i < texte.length; i++){
@@ -116,17 +126,17 @@ var checkPseudo = function() {	/*Vérifie la validité du Pseudo (Entre 3 et 20 
 	pseudo_valid = valid;	
 
 	if(!pseudo_valid)
-		document.getElementById("pseudo").style.color = "#FF0000";
+		document.getElementById("username").style.color = "#FF0000";
 	else
-		document.getElementById("pseudo").style.color = "#000000";
+		document.getElementById("username").style.color = "#000000";
 
 	updateButton();	
 	
 }
 
 
-var checkMdp = function() {	/*Vérifie la validité du Mot de passe (entre 8 et 16 caractères)*/
-	var texte = document.getElementById("mdp").value;
+function checkMdp() {	/*Vérifie la validité du Mot de passe (entre 8 et 16 caractères)*/
+	var texte = document.getElementById("userpwd").value;
 	var valid = true;
 
 	if ( texte.length < 8 || texte.length > 16)
@@ -135,18 +145,18 @@ var checkMdp = function() {	/*Vérifie la validité du Mot de passe (entre 8 et 
 	mdp_valid = valid;	
 
 	if(!mdp_valid)
-		document.getElementById("mdp").style.color = "#FF0000";
+		document.getElementById("userpwd").style.color = "#FF0000";
 	else
-		document.getElementById("mdp").style.color = "#000000";
+		document.getElementById("userpwd").style.color = "#000000";
 
 	updateButton();	
 	
 }
 
 
-var checkverifMdp = function(){	/*Vérifie que la valeur est la même que celle du mot de passe*/
+function checkverifMdp(){	/*Vérifie que la valeur est la même que celle du mot de passe*/
 	var texte = document.getElementById("verifMdp").value;
-	var texte2 = document.getElementById("mdp").value;
+	var texte2 = document.getElementById("userpwd").value;
 	var valid = false;
 
 	if (texte.length == texte2.length){
@@ -170,8 +180,8 @@ var checkverifMdp = function(){	/*Vérifie que la valeur est la même que celle 
 }
 
 
-var checkEmail = function() {	/*Vérifie la validité de l'email (Présence de @)*/
-	var texte = document.getElementById("email").value;
+function checkEmail() {	/*Vérifie la validité de l'email (Présence de @)*/
+	var texte = document.getElementById("useremail").value;
 	var valid = false;
 	
 	for(var i = 0; i < texte.length; i++){
@@ -185,9 +195,9 @@ var checkEmail = function() {	/*Vérifie la validité de l'email (Présence de @
 	email_valid = valid;	
 
 	if(!email_valid)
-		document.getElementById("email").style.color = "#FF0000";
+		document.getElementById("useremail").style.color = "#FF0000";
 	else
-		document.getElementById("email").style.color = "#000000";
+		document.getElementById("useremail").style.color = "#000000";
 
 	updateButton();	
 	
@@ -195,8 +205,8 @@ var checkEmail = function() {	/*Vérifie la validité de l'email (Présence de @
 
 
 
-var updateButton = function(){
-	form_valid = nom_valid && prenom_valid && naissance_valid && pseudo_valid && mdp_valid && email_valid && verifMdp_valid;
+function updateButton(){
+	form_valid = nom_valid && prenom_valid && naissance_valid && pseudo_valid && mdp_valid && email_valid 		&& verifMdp_valid;
 	
 	if (form_valid){
 		document.getElementById('butonSub').disabled = '';
@@ -205,6 +215,14 @@ var updateButton = function(){
 	else{
 		document.getElementById('butonSub').disabled = 'disabled';
 		document.getElementById('butonSub').className = "buttonDisabled";
+	}
+}
+
+function clearfields(){
+	var inputs = document.querySelectorAll(".champ1");
+	console.log(inputs);
+	for(var i = 0; i < inputs.length; i++){
+		inputs[i].value = "";
 	}
 }
 

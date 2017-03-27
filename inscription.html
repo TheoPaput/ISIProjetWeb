@@ -4,11 +4,10 @@
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="reset.css" />
    	<link rel="stylesheet" href="style.css" />
-	<script src="formulaire.js"></script>
 	<title>Inscrivez-vous gratuitement</title>
 </head>
 
-<body id="bodyPic" onpageshow="initPage()">
+<body id="bodyPic">
 
 	<header>
 		<section id="entete1">
@@ -19,50 +18,49 @@
 
 	<div id="subsection">
 
-	<div class="sub">
-		<p class="subtxt">
-			Inscrivez-vous
-		</p>
+		<div class="sub">
+			<p class="subtxt">
+				Inscrivez-vous
+			</p>
+		</div>
+		<section id="inscription">
+			<form method="post" action="/htbin/register.py">
+				<fieldset class="form1">
+
+					<label for="lastname">Nom :</label>
+					<input class="champ1" autofocus required type="text" name="lastname" id="lastname" />
+
+					<label for="firstname">Prénom :</label>
+					<input class="champ1"  type="text" name="firstname" id="firstname" />
+
+					<label for="birthdate">Date de naissance (jj/mm/aaaa) :</label>
+					<input class="champ1"  type="text" name="birthdate" id="birthdate" />
+					
+					<label for="username">Pseudo :</label>
+					<input class="champ1"  type="text" name="username" id="username" />
+					
+					<label for="userpwd">Mot de passe : (entre 8 et 16 caractères)</label>
+					<input class="champ1"  type="password" name="userpwd" id="userpwd" />
+
+					<label for="verifMdp"> Vérification mot de passe :</label>
+					<input class="champ1"  type="password" name="verifMdp" id="verifMdp" />
+					
+					<label for="useremail">Adresse mail :</label>
+					<input class="champ1"  type="text" name="useremail" id="useremail" />
+
+					<input id="butonSub" class="buttonDisabled" type="submit" value="Envoyer" />
+
+				</fieldset>
+			</form>
+		</section>
+		<div class="back">
+			<p class="backtxt">
+				<a href="index.html">Retour Accueil</a>
+			</p>
+		</div>
+
 	</div>
-	<section id="inscription">
-		<form method="post" action="formulaire.js">
-			<fieldset class="form1">
-
-				<label for="nomlab">Nom :</label>
-				<input class="champ1" autofocus required type="text" name="nom" id="nom" />
-
-				<label for="prenomlab">Prénom :</label>
-				<input class="champ1" required type="text" name="prenom" id="prenom" />
-
-				<label for="naissance">Date de naissance (jj/mm/aaaa) :</label>
-				<input class="champ1" required type="text" name="naissance" id="naissance" />
-				
-				<label for="pseudo">Pseudo :</label>
-				<input class="champ1" required type="text" name="pseudo" id="pseudo" />
-				
-				<label for="mdp">Mot de passe : (entre 8 et 16 caractères)</label>
-				<input class="champ1" required type="password" name="mdp" id="mdp" />
-
-				<label for="verifMdp"> Vérification mot de passe :</label>
-				<input class="champ1" required type="password" name="verifMdp" id="verifMdp" />
-				
-				<label for="email">Adresse mail :</label>
-				<input class="champ1" required type="text" name="email" id="email" />
-
-				<input id="butonSub" class="buttonDisabled" type="submit" value="Envoyer" />
-
-			</fieldset>
-		</form>
-	</section>
-	<div class="back">
-		<p class="backtxt">
-			<a href="index.html">Retour Accueil</a>
-		</p>
-	</div>
-
-	</div>
-	
-
+		
 </body>
-
+	<script src="formulaire.js"></script>
 </html>
