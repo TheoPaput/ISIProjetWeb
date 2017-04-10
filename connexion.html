@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="reset.css" />
+   	<link rel="stylesheet" href="style.css" />
+	<title>Connectez-vous</title>
+</head>
+
+<body id="bodyPic">
+
+	<header>
+		<section id="entete1">
+			<div class="bloc1"><a href="http://www.isima.fr/" class="link1">ISIMA</a></div>
+			<div class="bloc1"><a href="http://www.openium.fr/" class="link1">Openium</a></div>
+		</section>
+	</header>
+
+	<div id="subsection2">
+
+		<div class="sub">
+			<p class="subtxt">
+				Connectez-vous
+			</p>
+		</div>
+		<section id="inscription">
+			<form method="post" action="/htbin/register.py">
+				<fieldset class="form1">
+					
+					<label for="usernameCo">Pseudo :</label>
+					<input class="champ1" autofocus type="text" name="username" id="usernameCo" />
+					
+					<label for="userpwdCo">Mot de passe :</label>
+					<input class="champ1"  type="password" name="userpwd" id="userpwdCo" />
+
+
+					<input id="butonCo" class="buttonDisabled" type="submit" value="Connexion" />
+
+				</fieldset>
+			</form>
+		</section>
+		<div class="redirection">
+			<p class="redirectiontxt"><a href="inscription.html">Pas encore inscrit ? inscrivez-vous !</a></p>
+		</div>
+		<div class="back">
+			<p class="backtxt">
+				<a href="index.html">Retour Accueil</a>
+			</p>
+		</div>
+
+	</div>
+		
+</body>
+	<script src="formulaire.js"></script>
+</html>

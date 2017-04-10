@@ -118,6 +118,13 @@ header
 .bloc2
 {
 	margin-top: 15px;
+	transition: 0.5s;
+}
+
+.bloc2:hover
+{
+	transform: rotateY(35deg);
+	transition: 0.5s;
 }
 
 #couverturePic1
@@ -441,9 +448,26 @@ header
 	border-radius: 4px;
 }
 
+#subsection2
+{
+	margin-top: 310px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 279px;
+	background-color: white;
+
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+
+	border-radius: 4px;
+}
+
 .form1
 {
 	padding: 25px;
+	padding-bottom: 0px;
+
 	background-color: white;
 	
 	display: flex;
@@ -515,9 +539,35 @@ header
 	transition: 0.5s;
 }
 
+.redirection
+{
+	margin-top: 5px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.redirectiontxt>a
+{
+	color: #000000;
+	font-style: normal;
+	font-size: 14px;
+	font-family: Opensansregul;
+	font-weight: normal;
+	text-decoration: none;
+	text-align: justify;
+}
+
+.redirectiontxt>a:hover
+{
+	border-bottom: solid 1px #000000;
+}
 
 .back
 {
+	margin-top: 25px;
+
 	display: flex;
 	flex-direction: row;
 	justify-content: center;

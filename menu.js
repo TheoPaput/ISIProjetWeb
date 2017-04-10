@@ -3,6 +3,20 @@ var flag_dim = false;
 var ratio = 1035/643;
 var ratio2 = 600/376;
 
+document.addEventListener("fullscreenchange", replacePic, false );
+document.addEventListener("mozfullscreenchange", replacePic, false );
+document.addEventListener("webkitfullscreenchange", replacePic, false );
+document.addEventListener("msfullscreenchange", replacePic, false );
+
+
+ var replacePic = function(){
+	console.log("tetet");
+	var isFullScreen = document.fullScreen || document.mozFullScreen || document.webkitIsFullScreen;
+	if ( isFullScreen ){
+		document.getElementById("couverturePic1").style.backgroundImage = 'url("images/couverture.jpg")';
+	}
+ }
+
 
 
 var initPage = function(){
@@ -34,6 +48,7 @@ var switchMenu = function(){
 
 window.onresize = function ()
 {
+	console.log("ts");
 
 	if (window.matchMedia("(min-width: 600px)").matches) {
 		document.getElementById("menu1").style.display = 'flex';

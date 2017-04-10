@@ -22,7 +22,7 @@ clearfields();
 
 window.onpageshow = function(event) {
 	if(event.persisted) {
-   		 window.location.reload() 
+   		 window.location.reload()
 	}
 };
 
@@ -184,13 +184,16 @@ function checkEmail() {	/*Vérifie la validité de l'email (Présence de @)*/
 	var texte = document.getElementById("useremail").value;
 	var valid = false;
 	
-	for(var i = 0; i < texte.length; i++){
+	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	valid = re.test(texte);
+	
+	/*for(var i = 0; i < texte.length; i++){
 		var c = texte.charCodeAt(i);
 		valid = valid || (c == 64);
 	}
 
 	if ( texte.length < 5 || texte.length > 30)
-		valid = false;
+		valid = false;*/
 
 	email_valid = valid;	
 
