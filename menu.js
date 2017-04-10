@@ -3,13 +3,37 @@ var flag_dim = false;
 var ratio = 1035/643;
 var ratio2 = 600/376;
 
+var flagDisp = false;
+
+var connexion = document.getElementById("connexionButton");
+connexion.addEventListener("click", dispCo, false);
+
+
+
 document.addEventListener("fullscreenchange", replacePic, false );
 document.addEventListener("mozfullscreenchange", replacePic, false );
 document.addEventListener("webkitfullscreenchange", replacePic, false );
 document.addEventListener("msfullscreenchange", replacePic, false );
 
 
- var replacePic = function(){
+
+function dispCo(){
+	console.log("fonction");
+	if ( flagDisp == false){
+		document.getElementById("subsection2").style.height = 350 + "px";
+		flagDisp = true;
+		console.log("affiche");
+	}
+	else{
+		document.getElementById("subsection2").style.height = 0 + "px";
+		flagDisp = false;
+		console.log("hide");
+	}
+}
+
+
+
+var replacePic = function(){
 	console.log("tetet");
 	var isFullScreen = document.fullScreen || document.mozFullScreen || document.webkitIsFullScreen;
 	if ( isFullScreen ){
@@ -21,17 +45,20 @@ document.addEventListener("msfullscreenchange", replacePic, false );
 
 var initPage = function(){
 
-
 	if (window.matchMedia("(max-width: 600px)").matches) {
 		document.getElementById("menu1").style.display = 'none';
 	}
-	document.getElementById("entete3menu").addEventListener("click",switchMenu, false);
 
 	resizePic();
 }
 
 
 var switchMenu = function(){
+
+	console.log("AskSwitchMenu");
+
+	console.log(flag);
+
 	if (flag == false){
 		document.getElementById("menu1").style.display = 'flex';
 		flag = true;
@@ -48,7 +75,14 @@ var switchMenu = function(){
 
 window.onresize = function ()
 {
-	console.log("ts");
+	console.log("IsResized");
+
+	if (window.matchMedia("(max-width: 600px)").matches) {
+		document.getElementById("entete3menu").addEventListener("click",switchMenu, false);
+	}
+	else{
+		document.getElementById("entete3menu").removeEventListener("click",switchMenu, false);
+	}
 
 	if (window.matchMedia("(min-width: 600px)").matches) {
 		document.getElementById("menu1").style.display = 'flex';

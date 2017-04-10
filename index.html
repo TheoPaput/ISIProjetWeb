@@ -10,24 +10,66 @@
 <body onpageshow="initPage()">
 
 	<header>
+
 		<section id="entete1">
 			<div class="bloc1"><a href="http://www.isima.fr/" class="link1">ISIMA</a></div>
 			<div class="bloc1"><a href="http://www.openium.fr/" class="link1">Openium</a></div>
 		</section>
+
+
 		<section id="entete2">
 			<div class="bloc2"><a href="index.html"><img src="images/prepisiprojet.png" alt="PrepIsiProjet" id="logoprojet"></a></div>
 		</section>
+
+
 		<section id="entete3">
 			<div id="entete3menu">
 				<ul id="menu1">
 					<li class="list1"><a href="#presentation" class="link2">OpeniumWifi</a></li>
 					<li class="list1"><a href="deroulement.html" class="link2">Déroulement</a></li>
 					<li class="list1"><a href="https://github.com/search?utf8=%E2%9C%93&q=Blinkium" class="link2">GitHub</a></li>
-					<li class="list1"><a href="connexion.html" class="link2">Connexion</a></li>
+					<li class="list1"><p class="link2" id="connexionButton">Connexion</p></li>
 					<li class="list1"><a href="inscription.html" class="link2">Inscription</a></li>
 				</ul>
 			</div>
 		</section>
+
+
+				<section id="subsection2">
+
+					<div class="sub">
+						<p class="subtxt">
+							Connectez-vous
+						</p>
+					</div>
+					<section id="inscription">
+						<form method="post" action="/htbin/login.py">
+							<fieldset class="form1">
+						
+								<label for="usernameCo">Pseudo :</label>
+								<input class="champ1" autofocus type="text" name="username" id="usernameCo" />
+						
+								<label for="userpwdCo">Mot de passe :</label>
+								<input class="champ1"  type="password" name="userpwd" id="userpwdCo" />
+
+
+								<input id="butonCo" class="buttonDisabled" type="submit" value="Connexion" />
+
+							</fieldset>
+						</form>
+					</section>
+					<div class="redirection">
+						<p class="redirectiontxt"><a href="inscription.html">Pas encore inscrit ? inscrivez-vous !</a></p>
+					</div>
+					<div class="back">
+						<p class="backtxt">
+							<a href="index.html">Retour Accueil</a>
+						</p>
+					</div>
+				</section>	
+
+
+
 	</header>
 
 	<section class="couverture">

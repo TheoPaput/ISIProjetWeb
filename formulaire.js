@@ -139,10 +139,13 @@ function checkMdp() {	/*Vérifie la validité du Mot de passe (entre 8 et 16 car
 	var texte = document.getElementById("userpwd").value;
 	var valid = true;
 
-	if ( texte.length < 8 || texte.length > 16)
+	var re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9\D]{8,16}/;
+	mdp_valid = re.test(texte);
+
+	/*if ( texte.length < 8 || texte.length > 16)
 		valid = false;
 
-	mdp_valid = valid;	
+	mdp_valid = valid;*/	
 
 	if(!mdp_valid)
 		document.getElementById("userpwd").style.color = "#FF0000";
@@ -184,16 +187,9 @@ function checkEmail() {	/*Vérifie la validité de l'email (Présence de @)*/
 	var texte = document.getElementById("useremail").value;
 	var valid = false;
 	
-	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	/*var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;*/
+	var re = /^[\w.-]+@[\w-]+\.\w{2,6}/;
 	valid = re.test(texte);
-	
-	/*for(var i = 0; i < texte.length; i++){
-		var c = texte.charCodeAt(i);
-		valid = valid || (c == 64);
-	}
-
-	if ( texte.length < 5 || texte.length > 30)
-		valid = false;*/
 
 	email_valid = valid;	
 
