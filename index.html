@@ -43,7 +43,6 @@
 						</p>
 					</div>
 					<section id="inscription">
-						<form method="post" action="/htbin/login.py">
 							<fieldset class="form1">
 						
 								<label for="usernameCo">Pseudo :</label>
@@ -53,18 +52,12 @@
 								<input class="champ1"  type="password" name="userpwd" id="userpwdCo" />
 
 
-								<input id="butonCo" class="buttonDisabled" type="submit" value="Connexion" />
+								<input id="butonCo" class="buttonDisabled" type="submit" value="Connexion" onclick="request(readData);"/>
 
 							</fieldset>
-						</form>
 					</section>
 					<div class="redirection">
 						<p class="redirectiontxt"><a href="inscription.html">Pas encore inscrit ? inscrivez-vous !</a></p>
-					</div>
-					<div class="back">
-						<p class="backtxt">
-							<a href="index.html">Retour Accueil</a>
-						</p>
 					</div>
 				</section>	
 
@@ -124,5 +117,7 @@
 		
 	</footer>
 <script src="menu.js"></script>
+<script src="ajax.js"></script>
+
 </body>
 </html>

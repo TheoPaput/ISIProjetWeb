@@ -1,7 +1,6 @@
 var nom_valid = false, prenom_valid = false, naissance_valid = false, pseudo_valid = false, mdp_valid = false, email_valid = false, verifMdp_valid = false;
 var form_valid = false;
 
-var sertarien;
 
 var lastName = document.getElementById("lastname");
 var firstName = document.getElementById("firstname");
