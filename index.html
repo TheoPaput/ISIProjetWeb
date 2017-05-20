@@ -35,32 +35,32 @@
 		</section>
 
 
-				<section id="subsection2">
+		<section id="subsection2">
 
-					<div class="sub">
-						<p class="subtxt">
-							Connectez-vous
-						</p>
-					</div>
-					<section id="inscription">
-							<div class="form1">
+			<div class="sub">
+				<p class="subtxt">
+					Connectez-vous
+				</p>
+			</div>
+			<section id="inscription">
+					<div class="form1">
+				
+						<label for="usernameCo">Pseudo :</label>
+						<input class="champ1" autofocus type="text" name="username" id="usernameCo" />
+				
+						<label for="userpwdCo">Mot de passe :</label>
+						<input class="champ1"  type="password" name="userpwd" id="userpwdCo" />
+
+						<p id="ajaxScriptWarning"></p>
 						
-								<label for="usernameCo">Pseudo :</label>
-								<input class="champ1" autofocus type="text" name="username" id="usernameCo" />
-						
-								<label for="userpwdCo">Mot de passe :</label>
-								<input class="champ1"  type="password" name="userpwd" id="userpwdCo" />
+						<input id="butonCo" class="buttonDisabled" type="submit" value="Connexion" onclick="request(readData);"/>
 
-								<p id="ajaxScriptWarning"></p>
-								
-								<input id="butonCo" class="buttonDisabled" type="submit" value="Connexion" onclick="request(readData);"/>
-
-							</div>
-					</section>
-					<div class="redirection">
-						<p class="redirectiontxt"><a href="inscription.html">Pas encore inscrit ? inscrivez-vous !</a></p>
 					</div>
-				</section>	
+			</section>
+			<div class="redirection">
+				<p class="redirectiontxt"><a href="inscription.html">Pas encore inscrit ? inscrivez-vous !</a></p>
+			</div>
+		</section>	
 
 
 
@@ -120,8 +120,16 @@
 
 
 	<div id="chatBoxDiv">
-		<p id="enteteChat">chat box</p>
+		<div id="enteteChat">
+			<p id="chatBoxHead">Clique ici pour ouvrir le chat</p>
+		</div>
+		<div id="corpsChat">
 			
+		</div>		
+		<div id="userChat">
+			<input type="text" placeholder="Saisissez votre message..." name="message" id="messageChat" />
+			<p id="envoyerChat">Envoyer</p>
+		</div>
 	</div>
 
 
