@@ -73,6 +73,16 @@ header
 	z-index: 1;
 }
 
+#ajaxScriptWarning
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
+	height: 20px;
+	
+	display: none;
+}
+
 .bloc1
 {
 	margin-top: 5px;
@@ -477,17 +487,22 @@ header
 {
 	padding: 25px;
 	padding-bottom: 0px;
+	
+	width: 450px;
 
 	background-color: white;
 	
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 }
 
 
 .champ1
 {
+	width: 150px;
+
 	margin-top: 5px;
 	margin-bottom: 12px;
 }
@@ -649,6 +664,40 @@ footer
 	background-color: #bcbcbc;
 	
 	box-shadow: 1px 1px 5px #212121;
+}
+
+
+#chatBoxDiv
+{
+	width: 350px;
+	height: 600px;
+
+	position: fixed;
+	right: 20px;
+
+	background-color: red;
+
+	z-index: 1;
+
+}
+
+#enteteChat
+{
+	height: 35px;
+	width: 100%;
+
+	color: white;
+	font-style: normal;
+	font-size: 20px;
+	font-family: Opensansregul;
+	font-weight: normal;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: center;
+
+	background-color: blue;
+
+	cursor: pointer;
 }
 
 

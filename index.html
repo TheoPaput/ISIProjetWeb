@@ -7,7 +7,7 @@
 	<title>Prep'ISI Project | Decouvrez notre projet ISIMA</title>
 </head>
 
-<body onpageshow="initPage()">
+<body onpageshow="initPage()" onpageshow="window.onresize()">
 
 	<header>
 
@@ -43,7 +43,7 @@
 						</p>
 					</div>
 					<section id="inscription">
-							<fieldset class="form1">
+							<div class="form1">
 						
 								<label for="usernameCo">Pseudo :</label>
 								<input class="champ1" autofocus type="text" name="username" id="usernameCo" />
@@ -51,10 +51,11 @@
 								<label for="userpwdCo">Mot de passe :</label>
 								<input class="champ1"  type="password" name="userpwd" id="userpwdCo" />
 
-
+								<p id="ajaxScriptWarning"></p>
+								
 								<input id="butonCo" class="buttonDisabled" type="submit" value="Connexion" onclick="request(readData);"/>
 
-							</fieldset>
+							</div>
 					</section>
 					<div class="redirection">
 						<p class="redirectiontxt"><a href="inscription.html">Pas encore inscrit ? inscrivez-vous !</a></p>
@@ -116,8 +117,18 @@
 	<footer>
 		
 	</footer>
-<script src="menu.js"></script>
-<script src="ajax.js"></script>
+
+
+	<div id="chatBoxDiv">
+		<p id="enteteChat">chat box</p>
+			
+	</div>
+
+
+	<script src="menu.js"></script>
+	<script src="ajax.js"></script>
+	<script src="chat.js"></script>
 
 </body>
+
 </html>

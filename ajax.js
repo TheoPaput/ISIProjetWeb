@@ -11,14 +11,18 @@ function request(callback) {
 	var usernameCo = encodeURIComponent(document.getElementById("usernameCo").value);
 	var userpwdCo = encodeURIComponent(document.getElementById("userpwdCo").value);
 	
-	xhr.open("GET", "XMLHttpRequest_getString.php?usernameCo=" + usernameCo + "&userpwdCo=" + userpwdCo, true);
+	xhr.open("GET", "htbin/login.py?username=" + usernameCo + "&userpwd=" + userpwdCo, true);
 	xhr.send(null);
 }
 
 
 
 function readData(sData) {
-	alert(sData);
+	/*alert(sData);*/
+	
+	var txt = document.getElementById("ajaxScriptWarning");
+	txt.style.display = "block";
+	txt.innerHTML = sData;
 }
 
 

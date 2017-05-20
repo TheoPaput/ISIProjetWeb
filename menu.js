@@ -20,7 +20,7 @@ document.addEventListener("msfullscreenchange", replacePic, false );
 function dispCo(){
 	console.log("fonction");
 	if ( flagDisp == false){
-		document.getElementById("subsection2").style.height = 270 + "px";
+		document.getElementById("subsection2").style.height = 300 + "px";
 		flagDisp = true;
 		console.log("affiche");
 	}

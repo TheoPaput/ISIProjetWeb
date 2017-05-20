@@ -37,7 +37,7 @@
 						</p>
 					</div>
 					<section id="inscription">
-							<fieldset class="form1">
+							<div class="form1">
 						
 								<label for="usernameCo">Pseudo :</label>
 								<input class="champ1" autofocus type="text" name="username" id="usernameCo" />
@@ -45,10 +45,11 @@
 								<label for="userpwdCo">Mot de passe :</label>
 								<input class="champ1"  type="password" name="userpwd" id="userpwdCo" />
 
+								<p id="ajaxScriptWarning"></p>
 
 								<input id="butonCo" class="buttonDisabled" type="submit" value="Connexion" onclick="request(readData);"/>
 
-							</fieldset>
+							</div>
 					</section>
 					<div class="redirection">
 						<p class="redirectiontxt"><a href="inscription.html">Pas encore inscrit ? inscrivez-vous !</a></p>
