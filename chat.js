@@ -2,14 +2,15 @@ var haut;
 var flagOpen = false;
 
 
-
 var chatbox = document.getElementById("chatBoxDiv");
 var chatboxhead = document.getElementById("enteteChat");
 var chatboxheadtxt = document.getElementById("chatBoxHead");
+var corpschatbox = document.getElementById("corpsChat");
 
 chatboxhead.addEventListener("click", openorclose, false);
 
 
+// gestion apparence chatBox
 
 
 haut = (window.innerHeight);
@@ -42,7 +43,7 @@ function openorclose(){
 
 
 
-// traitement chatBox
+// traitement serveur chatBox
 
 
 var sendbutton = document.getElementById("envoyerChat");
@@ -59,7 +60,6 @@ function traitement(){
 
 
 function sendMessage(callback){
-	console.log("t");
 	var message = messagecontent.value;
 	messagecontent.value = "";
 	var xhr = getXMLHttpRequest();
@@ -87,11 +87,49 @@ function verification(sData){
 }
 
 
+// Actualisation chatBox
 
 
+var tid = setInterval(actualisation, 2000);
 
+function actualisation(){
+	if ( flagOpen == true){
+		actualiseChat(afficheMsg);
+	}
+}
 
+function actualiseChat(callback){
+	var xhr = getXMLHttpRequest();
+	
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+			callback(JSON.parse(xhr.responseText));
+		}
+	};
+	
+	xhr.open("GET", "htbin/chatget.py", true);
+	xhr.send(null);
+}
 
+function afficheMsg(sData){
+	for (i = 0 ; i < sData.length ; i++){
+		var div = document.createElement("DIV");
+		div.className = "messageForm";
+		
+		var p1 = document.createElement("P");
+		p1.className = "messageTxt";
+		p1.innerHTML = "Auteur : " + sData[i].user;
+		
+		var p2 = document.createElement("P");
+		p2.className = "messageTxt";
+		p2.innerHTML = sData[i].msg;
+		
+		div.appendChild(p1);
+		div.appendChild(p2);
+		
+		corpschatbox.appendChild(div);
+	}
+}
 
 
 

@@ -758,7 +758,25 @@ footer
 }
 
 
+.messageForm
+{
+	width: 100%;
 
+	border: solid 1px grey;
+}
+
+.messageTxt
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+
+	color: grey;
+	font-style: normal;
+	font-size: 14px;
+	font-family: Opensansregul;
+	font-weight: normal;
+	text-decoration: none;
+}
 
 
 
