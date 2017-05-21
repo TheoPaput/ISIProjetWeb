@@ -79,7 +79,7 @@ function verification(sData){
 		alert(sData.msg);
 	}
 	if (sData.num == 1){
-		console.log(sData.msg);
+		alert(sData.msg);
 	}
 	if (sData.num == 0){
 		console.log(sData.msg);
@@ -112,6 +112,9 @@ function actualiseChat(callback){
 }
 
 function afficheMsg(sData){
+	while (corpschatbox.firstChild){
+		corpschatbox.removeChild(corpschatbox.firstChild);
+	}
 	for (i = 0 ; i < sData.length ; i++){
 		var div = document.createElement("DIV");
 		div.className = "messageForm";
@@ -119,12 +122,18 @@ function afficheMsg(sData){
 		var p1 = document.createElement("P");
 		p1.className = "messageTxt";
 		p1.innerHTML = "Auteur : " + sData[i].user;
+
+		var p = document.createElement("P");
+		p.className = "messageTxt";
+		p.innerHTML = sData[i].date + "  " + sData[i].time;
 		
 		var p2 = document.createElement("P");
 		p2.className = "messageTxt";
 		p2.innerHTML = sData[i].msg;
+		p2.style.color = "#4c4c4c";
 		
 		div.appendChild(p1);
+		div.appendChild(p);
 		div.appendChild(p2);
 		
 		corpschatbox.appendChild(div);
