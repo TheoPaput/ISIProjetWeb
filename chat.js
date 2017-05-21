@@ -47,6 +47,7 @@ function openorclose(){
 // traitement serveur chatBox
 
 
+
 var sendbutton = document.getElementById("envoyerChat");
 var messagecontent = document.getElementById("messageChat");
 
@@ -88,6 +89,11 @@ function verification(sData){
 	actualisation();
 }
 
+function sendm(e){
+	 if (e.keyCode == 13) {
+		 traitement();
+	 }
+}
 
 // Actualisation chatBox
 
