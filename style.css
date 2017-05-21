@@ -358,7 +358,7 @@ header
 	margin-top: 10px;
 
 	width: 100%;
-	height: 600px;
+	/*height: 600px;*/
 	background-color: #bcbcbc;
 
 	display: flex;
@@ -370,8 +370,10 @@ header
 
 .pres1
 {
+	padding: 20px;
+
 	width: 1035px;
-	height: 600px;
+	/*height: 600px;*/
 	/*background-color: black;*/
 }
 
@@ -381,7 +383,7 @@ header
 	margin-top: 10px;
 
 	width: 100%;
-	height: 600px;
+	/*height: 600px;*/
 	/*background-color: #bcbcbc;*/
 
 	display: flex;
@@ -393,8 +395,10 @@ header
 
 .pres2
 {
+	padding: 20px;
+
 	width: 1035px;
-	height: 600px;
+	/*height: 600px;*/
 	/*background-color: black;*/
 }
 
@@ -675,6 +679,7 @@ h3
 
 table
 {
+	margin-top: 50px;
     border-collapse: collapse;
 }
 
@@ -720,7 +725,7 @@ footer
 {
 	margin-top: 0px;
 	width: 100%;
-	height: 200px;
+	height: 100px;
 	background-color: #bcbcbc;
 	
 	box-shadow: 1px 1px 5px #212121;
@@ -762,7 +767,6 @@ footer
 	width: 100%;
 
 	overflow-y: scroll;
-	overflow-x: hide;
 }
 
 #userChat
@@ -851,7 +855,10 @@ footer
 }
 
 
-
+video
+{
+	margin: 40px;
+}
 
 
 /********** Articles *************/

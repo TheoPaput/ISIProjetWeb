@@ -69,8 +69,8 @@
 		<div class="pres1" id="step1">
 			<h3>Découverte du développement sous android</h3>
 			<p class="contenuPres">Dans cette partie nous avons du apprendre le développement sous le système d'android
-			à l'aide de l'outil de développement android studio, </p>
-			<img src="https://tctechcrunch2011.files.wordpress.com/2017/02/android-studio-logo.png" class="im1">
+			à l'aide de l'outil de développement android studio, des videos nous ont notament permis de comprendre son fonctionnement</p>
+			<video src="videos/tuto.mp4" controls height="500"></video>
 		</div>
 	</section>
 
@@ -79,7 +79,7 @@
 			<h3>Découverte du développement sous arduino</h3>
 			<p class="contenuPres">Dans cette partie nous avons du apprendre le développement sous le système d'arduino
 			à l'aide de l'outil de développement propre à ce système</p>
-			<img src="https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png" class="im1">
+			<img src="https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png" alt="picture" class="im1">
 		</div>
 	</section>
 
@@ -87,12 +87,12 @@
 		<div class="pres1" id="step3">
 			<h3>Nos premères idées et estimation du temps de travail</h3>
 			<p class="contenuPres">Dans cette partie nous avons commencer à concevoir des maquette du projet au vus des idées que nous avions, nous avons également conçu un planing récapitulant chaque étapes nécéssaires à la réalisation de ce projet suivant nos prédictions</p>
-			<img src="images/prev.jpg" class="im1">
+			<img src="images/prev.jpg" alt="picture" class="im1">
 		</div>
 	</section>
 
 	<section class="etape2">
-		<div class="pres2">
+		<div class="pres2" id="step4">
 			<h3>Notre premier prototype et nos premiers problèmes</h3>
 			<p class="contenuPres">Après la réalisation de notre première maquette, certains problèmes non pris en compte sont survenus notament due à des problèmes de code mais nous verrons plus tard que le matèriel y été aussi pour quelque chose, ci joint un tableau récapitulant les problèmes rencontrés ainsi que les solutions apportées pour y remédier</p>
 			<table>
@@ -102,18 +102,40 @@
 			   </tr>
 
 			   <tr>
-			       <td>Synchronisation</td>
-			       <td>Ajout d'une phase de synchronisation</td>
+			       <td>Problèmes de code</td>
+			       <td>Correction des erreurs algorithmiques et stabilisation de l'algorithme</td>
 			   </tr>
 			   <tr>
-			       <td>Michelle</td>
-			       <td>26 ans</td>
+			       <td>Timer arduino</td>
+			       <td>Modification du timer arduino pour un timer plus précis à haute fréquences</td>
+			   </tr>
+			   <tr>
+			       <td>Synchronisation</td>
+			       <td>Ajout d'une phase de synchronisation pour fiabiliser la fréquence de lecture</td>
 			   </tr>
 			</table>
+		</div>
 	</section>
 	
+	<section class="etape1">
+		<div class="pres1" id="step5">
+			<h3>Phase de correction des dernières erreures</h3>
+			<p class="contenuPres">Dans cette partie ,nous avons corrigé les dèrnières erreures liées à l'algorithme 
+			du programme et nous avons ainsi réussis à obtenir des résultats cohérents mais limité par une fvréquence de transmission de 30hz en attendant de recevoir le nouveau capyeur ( photodiode )</p>
+			<img src="https://cdn-images-1.medium.com/max/800/1*UcpODv1lxR_Bt3MyaOvYWA.jpeg" alt="picture" class="im1">
+		</div>
+	</section>
+
+	<section class="etape2">
+		<div class="pres2" id="step6">
+			<h3>Modification du capteur de lumière</h3>
+			<p class="contenuPres">Nous avons enfin changé le capteur de lumière, ainsi la transmission à 60Hz ( fréquence de rafraichissement de l'écran de la majorité des smartphones ) étant fonctionnelle, nous avons commencer les phases de test automatisées pour s'assurer que le produit marche dans toute les situations possibles</p>
+			<img src="https://www.arduino.cc/en/uploads/Products/Uno.jpg" alt="picture" class="im1">
+		</div>
+	</section>
+
 	<footer>
-		
+		<p class="contenuPres">Attention, ce site utilise JavaScript</p>
 	</footer>
 
 
@@ -130,10 +152,10 @@
 		</div>
 	</div>
 
+	<script src="chat.js"></script>
+	<script src="menu.js"></script>
+	<script src="ajax.js"></script>
 	
 </body>
-<script src="chat.js"></script>
-<script src="menu.js"></script>
-<script src="ajax.js"></script>
 </html>
 

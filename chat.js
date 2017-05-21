@@ -8,6 +8,8 @@ var chatboxheadtxt = document.getElementById("chatBoxHead");
 var corpschatbox = document.getElementById("corpsChat");
 
 chatboxhead.addEventListener("click", openorclose, false);
+window.addEventListener("fullscreenchange", resize, false);
+window.addEventListener('resize', resize, false);
 
 
 // gestion apparence chatBox
@@ -16,8 +18,8 @@ chatboxhead.addEventListener("click", openorclose, false);
 haut = (window.innerHeight);
 chatbox.style.top = (haut - 35) + "px";
 
-window.onresize = function ()
-{
+
+function resize(){
 	haut = (window.innerHeight);
 	if (flagOpen == false){
 		chatbox.style.top = (haut - 35) + "px";
@@ -26,7 +28,6 @@ window.onresize = function ()
 		chatbox.style.top = (haut - 600) + "px";
 	}
 }
-
 
 function openorclose(){
 	if (flagOpen == false){
@@ -84,13 +85,14 @@ function verification(sData){
 	if (sData.num == 0){
 		console.log(sData.msg);
 	}
+	actualisation();
 }
 
 
 // Actualisation chatBox
 
 
-var tid = setInterval(actualisation, 2000);
+var tid = setInterval(actualisation, 2000); // actualisation automatique toute les 2 secondes
 
 function actualisation(){
 	if ( flagOpen == true){
@@ -139,13 +141,6 @@ function afficheMsg(sData){
 		corpschatbox.appendChild(div);
 	}
 }
-
-
-
-
-
-
-
 
 
 
